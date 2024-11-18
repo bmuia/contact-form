@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact form</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container--a">
@@ -25,18 +28,23 @@
                 </div>
 
                 <div class="email">
-                    <label>Email <span>*</span></label>
+                    <label>Email Address <span>*</span></label>
                     <input type="email" />
                 </div>
 
                 <div class="query-type">
-                    <div class="query">
-                        <input type="radio" name="General Enquiry" id="">
-                        <label>General Enquiry</label>
-                    </div>
-                    <div class="query--a">
-                        <input type="radio" name="Support Request" id="">
-                        <label>Support Request</label>
+                    <div class="type">
+                        <label>Query Type <span>*</span></label>
+                        <div class="query--a">
+                            <div class="query">
+                                <input type="radio" name="General Enquiry" id="">
+                                <label>General Enquiry</label>
+                            </div>
+                            <div class="query">
+                                <input type="radio" name="Support Request" id="">
+                                <label>Support Request</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

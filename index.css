@@ -2,11 +2,146 @@
 body{
     margin: 0;
     padding: 0;
-    height: 100vh;
     background-color:  hsl(148, 38%, 91%);
+    display: flex;
+    justify-content: center;
 }
 
 *{
     box-sizing: border-box;
     font-size: 25px;
+    color: grey;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
+
+.container--a{
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    background-color: hsl(0, 0%, 100%);
+    margin: 15px;
+    width: 50%;
+    border-radius: 1.2em;
+}
+
+.container--b {
+    padding: 30px;
+}
+
+.container--b h2{
+    font-size: 30px;
+    color: #000;
+    font-weight: 500;
+}
+
+form{
+
+}
+
+input{
+    border-radius: 0.3em;
+    border: 1px solid hsl(186, 15%, 59%);
+    color: #000;
+}
+
+span{
+    color: hsl(169, 82%, 27%);  
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+label{
+    font-size: 15px;
+}
+
+
+.form--a{
+    display: flex;
+    gap: 15px;
+}
+
+.form--a label{
+}
+
+.form--a input{
+    margin-top: 5px;
+    padding: 7px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.email{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.email input{
+    margin-top: 5px;
+    padding: 7px;
+}
+
+.query-type{
+    width: 100%;
+    gap: 15px;
+}
+
+.query--a{
+    display:flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.query{
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 0.3em;
+    padding: 10px;
+    width: 100%;
+    display: inline-block;
+}
+
+.text-area{
+    display: flex;
+    flex-direction: column;
+}
+
+.text-area textarea{
+    height: 15vh;
+    border-radius: 0.3em;
+    border: 1px solid hsl(186, 15%, 59%);
+    margin-top: 10px;
+    font-size: 20px;
+    color: #000;
+}
+
+.consent{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.consent input{
+    font-size: 20px; 
+}
+
+.consent p{
+    font-size: 15px;
+}
+
+.btn {
+    width: 100%;
+}
+
+.btn button{
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    padding: 13px;
+    border-radius: 0.5em;
+    border: none;
+    background-color: hsl(169, 82%, 27%);
+    cursor: pointer;
+}
+

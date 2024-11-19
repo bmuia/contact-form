@@ -1,68 +1,76 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact form</title>
+    <title>Contact Form</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container--a">
-        <div class="container--b">
+    <div class="contact-container">
+        <div class="contact-box">
             <h2>Contact Us</h2>
             <form>
-                <div class="form--a">
-                    <div class="firstname"> 
+                <div class="form-row">
+                    <div class="form-group">
                         <label>First Name <span>*</span></label>
-                        <input type="text" />
+                        <input type="text" class="input-first-name" />
+                        <div class="error-message">This field is required</div>
                     </div>
-                    <div class="lastname">
+                    <div class="form-group">
                         <label>Last Name <span>*</span></label>
-                        <input type="text" />
+                        <input type="text" class="input-last-name" />
+                        <div class="error-message">This field is required</div>
                     </div>
                 </div>
 
-                <div class="email">
+                <div class="form-email">
                     <label>Email Address <span>*</span></label>
-                    <input type="email" />
+                    <input type="email" class="input-email" />
+                    <div class="error-email">Please enter a valid email address</div>
                 </div>
 
-                <div class="query-type">
-                    <div class="type">
+                <div class="form-query">
+                    <div class="query-type">
                         <label>Query Type <span>*</span></label>
-                        <div class="query--a">
-                            <div class="query">
-                                <input type="radio" name="General Enquiry" id="">
-                                <label>General Enquiry</label>
+                        <div class="query-options">
+                            <div class="query-option">
+                                <input type="radio" name="queryType" class="radio-general" id="radio-general" value="General Enquiry">
+                                <label for="radio-general">General Enquiry</label>
                             </div>
-                            <div class="query">
-                                <input type="radio" name="Support Request" id="">
-                                <label>Support Request</label>
+                            <div class="query-option">
+                                <input type="radio" name="queryType" class="radio-support" id="radio-support" value="Support Request">
+                                <label for="radio-support">Support Request</label>
                             </div>
                         </div>
+                        <div class="error-message">This field is required</div>
                     </div>
                 </div>
 
-                <div class="text-area">
+                <div class="form-message">
                     <label>Message <span>*</span></label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea class="input-message" cols="30" rows="10"></textarea>
+                    <div class="error-message">This field is required</div>
                 </div>
 
-                <div class="consent">
-                    <input type="checkbox" name="" id="">
+                <div class="form-consent">
+                    <input type="checkbox" class="input-consent" id="consent-checkbox">
                     <p>I consent to being contacted by the team <span>*</span></p>
+                    <div class="error-consent">
+                        <div class="error-message">This field is required</div>
+                    </div>
                 </div>
 
-                <div class="btn">
-                    <button>Submit</button>
+                <div class="form-submit">
+                    <button type="submit">Submit</button>
                 </div>
             </form>
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>

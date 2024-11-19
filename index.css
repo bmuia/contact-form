@@ -1,13 +1,12 @@
-/* index.css */
-body{
+body {
     margin: 0;
     padding: 0;
-    background-color:  hsl(148, 38%, 91%);
+    background-color: hsl(148, 38%, 91%);
     display: flex;
     justify-content: center;
 }
 
-*{
+* {
     box-sizing: border-box;
     font-size: 25px;
     color: grey;
@@ -17,126 +16,150 @@ body{
     font-style: normal;
 }
 
-.container--a{
-    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+.contact-container {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
     background-color: hsl(0, 0%, 100%);
     margin: 15px;
     width: 50%;
     border-radius: 1.2em;
 }
 
-.container--b {
+.contact-box {
     padding: 30px;
 }
 
-.container--b h2{
+.contact-box h2 {
     font-size: 30px;
     color: #000;
     font-weight: 500;
 }
 
-form{
+form {}
 
-}
-
-input{
+input {
     border-radius: 0.3em;
     border: 1px solid hsl(186, 15%, 59%);
     color: #000;
 }
 
-span{
-    color: hsl(169, 82%, 27%);  
+input:focus {
+    border: 1px solid hsl(148, 38%, 91%);
+}
+
+input:focus-visible {
+    outline: 1px solid hsl(169, 82%, 27%);
+}
+
+span {
+    color: hsl(169, 82%, 27%);
     font-size: 16px;
     margin-left: 5px;
 }
 
-label{
+label {
     font-size: 15px;
 }
 
-
-.form--a{
+.form-row {
     display: flex;
     gap: 15px;
 }
 
-.form--a label{
-}
-
-.form--a input{
+.form-group input {
     margin-top: 5px;
     padding: 7px;
     margin-bottom: 25px;
     width: 100%;
 }
 
-.email{
+.form-email {
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
 }
 
-.email input{
+.form-email input {
     margin-top: 5px;
     padding: 7px;
 }
 
-.query-type{
+.form-query {
     width: 100%;
     gap: 15px;
 }
 
-.query--a{
-    display:flex;
+.query-options {
+    display: flex;
     gap: 15px;
     margin-bottom: 30px;
     margin-top: 10px;
 }
 
-.query{
+.query-option {
     border: 1px solid hsl(186, 15%, 59%);
     border-radius: 0.3em;
     padding: 10px;
     width: 100%;
     display: inline-block;
     cursor: pointer;
-}
-
-.text-area{
     display: flex;
-    flex-direction: column;
+    align-items: center;
 }
 
-.text-area textarea{
+
+input[type="radio"] {
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border: 2px solid hsl(169, 82%, 27%);
+    
+    border-radius: 50%; 
+    outline: none;
+    cursor: pointer;
+    background-color: hsl(169, 82%, 27%);
+}
+
+/* When the radio button is selected */
+input[type="radio"]:checked {
+    border: 1px solid hsl(169, 82%, 27%);
+}
+
+/* Focused state */
+input[type="radio"]:focus {
+    outline: 2px solid hsl(186, 15%, 59%);
+}
+
+
+.form-message textarea {
+    display: flex;
     height: 15vh;
     border-radius: 0.3em;
     border: 1px solid hsl(186, 15%, 59%);
     margin-top: 10px;
     font-size: 20px;
     color: #000;
+    width: 100%;
 }
 
-.consent{
+.form-message textarea:focus {
+    outline: 1px solid hsl(169, 82%, 27%);
+}
+
+.form-consent {
     display: flex;
     gap: 10px;
     margin-top: 20px;
 }
 
-.consent input{
-    font-size: 20px; 
+.form-consent input {
+    font-size: 20px;
 }
 
-.consent p{
+.form-consent p {
     font-size: 15px;
 }
 
-.btn {
-    width: 100%;
-    margin-top: 20px;
-}
-
-.btn button{
+.form-submit button {
     width: 100%;
     color: #fff;
     font-size: 20px;
@@ -147,25 +170,46 @@ label{
     cursor: pointer;
 }
 
-@media screen and (max-width: 562px) {
+.form-submit button:hover {
+    background-color: hsl(186, 15%, 59%);
+}
 
-    .container--a{
+.error-message {
+    display: none;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: hsl(0, 66%, 54%);
+}
+
+.error-email {
+    display: none;
+    font-size: 12px;
+    margin-top: 5px;
+    color: hsl(0, 66%, 54%);
+}
+
+.error-consent {
+    display: none;
+}
+
+@media screen and (max-width: 562px) {
+    .contact-container {
         width: 80%;
     }
 
-    .form--a{
+    .form-row {
         display: block;
     }
 
-    .query--a{
+    .query-options {
         display: block;
     }
 
-    .query{
+    .query-option {
         margin: 5px;
     }
 
-    .text-area  textarea{
+    .form-message textarea {
         height: 30vh;
     }
 }
